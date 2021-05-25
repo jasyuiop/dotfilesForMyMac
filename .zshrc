@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract sudo systemadmin npm yarn brew zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git extract sudo systemadmin npm yarn fzf brew zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,6 +107,9 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias sshpi="ssh pi@192.168.2.30"
+alias ankara='sshuttle -r emre.nefesli@ank.ozguryazilim.com.tr:2244 0/0'
+alias istanbul='sshuttle -r emre.nefesli@ist.ozguryazilim.com.tr:2244 0/0'
+alias tere='ssh -A emre.nefesli@tere-ic.ozguryazilim.com.tr'
 # Exports
 export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
