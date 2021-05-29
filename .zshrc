@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract sudo systemadmin npm yarn fzf brew zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git extract sudo systemadmin tmux npm yarn fzf brew zsh-autosuggestions zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,17 +102,23 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-#
-# Example aliases
-# alias zshconfig="mate ~/.zshrc"
-# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Connection
 alias sshpi="ssh pi@192.168.2.30"
 alias ankara='sshuttle -r emre.nefesli@ank.ozguryazilim.com.tr:2244 0/0'
 alias istanbul='sshuttle -r emre.nefesli@ist.ozguryazilim.com.tr:2244 0/0'
 alias tere='ssh -A emre.nefesli@tere-ic.ozguryazilim.com.tr'
+
+# Tmux Sessions
+alias mySession='tmux new-session -d -s "My"'
+alias workSession='tmux new-session -d -s "Work"'
+
 # Exports
 export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
 export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
+export PATH="/opt/homebrew/opt/curl/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 alias config='/usr/bin/git --git-dir=/Users/jasyuiop/.cfg/ --work-tree=/Users/jasyuiop'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
