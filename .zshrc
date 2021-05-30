@@ -103,6 +103,10 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
 
+# Disk
+alias markdowns="cd ~/Sync/ozguryazilimas/markdowns" 
+alias ozguryazilimas="cd ~/Sync/ozguryazilimas" 
+
 # Connection
 alias sshpi="ssh pi@192.168.2.30"
 alias ankara='sshuttle -r emre.nefesli@ank.ozguryazilim.com.tr:2244 0/0'
