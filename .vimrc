@@ -30,7 +30,6 @@ Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'voldikss/vim-floaterm'
 
 call plug#end()
 
@@ -60,37 +59,12 @@ let g:airline#extensions#tabline#enabled = 1
 let g:fzf_preview_window = 'right:50%'
 let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6  }  }
 
-" Floaterm
-let g:floaterm_keymap_kill = '<leader>q' 
-let g:floaterm_keymap_toggle = '<F12>'
-let g:floaterm_width = 0.9
-let g:floaterm_height = 0.9
-
 " Undotree keymap
 nnoremap <F5> :UndotreeToggle<CR>
 nnoremap <leader>u :UndotreeFocus<CR>
 
-" Window layout
+" Undotre Window layout
 if !exists('g:undotree_WindowLayout')
     let g:undotree_WindowLayout = 3
-endif
-
-" e.g. using 'd' instead of 'days' to save some space.
-if !exists('g:undotree_ShortIndicators')
-    let g:undotree_ShortIndicators = 0
-endif
-
-" undotree window width
-if !exists('g:undotree_SplitWidth')
-    if g:undotree_ShortIndicators == 1
-        let g:undotree_SplitWidth = 24
-    else
-        let g:undotree_SplitWidth = 30
-    endif
-endif
-
-" diff window height
-if !exists('g:undotree_DiffpanelHeight')
-    let g:undotree_DiffpanelHeight = 14
 endif
 
