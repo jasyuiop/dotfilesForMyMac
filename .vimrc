@@ -1,32 +1,33 @@
 syntax on
 
 set noerrorbells
-set tabstop=2 softtabstop=2
-set shiftwidth=2
+set tabstop=4 softtabstop=4
+set shiftwidth=4
 set expandtab
 set smartindent
+set guicursor=
 set nu
 set nowrap
 set smartcase
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undodir 
 set undofile
 set incsearch
+set nohlsearch
+set hidden
+set signcolumn=yes
+
+set colorcolumn=80
+highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 " macos backspace problem
 set backspace=indent,eol,start
-
-" set colorcolumn=80
-" highlight ColorColumn ctermbg=0 guibg=lightgrey
 
 call plug#begin('~/.vim/plugged')
 
 Plug 'morhetz/gruvbox'
 Plug 'preservim/nerdtree'
-Plug 'https://tpope.io/vim/fugitive.git'
-Plug 'junegunn/fzf.vim'
-Plug 'vim-utils/vim-man'
 Plug 'mbbill/undotree'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -41,8 +42,6 @@ let mapleader = " "
 
 " Nerdtree keymap
 nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-t> :NERDTreeToggle<CR>
-nnoremap <C-f> :NERDTreeFind<CR>
 " Start NERDTree when Vim is started without file arguments.
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
@@ -54,10 +53,6 @@ autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTr
 let g:airline_theme = 'gruvbox'
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
-
-" Fzf
-let g:fzf_preview_window = 'right:50%'
-let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6  }  }
 
 " Undotree keymap
 nnoremap <F5> :UndotreeToggle<CR>
