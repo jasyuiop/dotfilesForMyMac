@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract sudo systemadmin tmux npm yarn fzf brew zsh-autosuggestions zsh-syntax-highlighting)
+plugins=(git extract sudo systemadmin tmux npm yarn fzf brew zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,10 +102,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
 # users are encouraged to define aliases within the ZSH_CUSTOM folder.
 # For a full list of active aliases, run `alias`.
-
-
-# Connection
-alias sshpi="ssh pi@192.168.2.30"
 
 # Tmux Sessions
 alias mySession='tmux new-session -d -s "My"'
