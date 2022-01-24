@@ -77,7 +77,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git extract sudo systemadmin tmux npm yarn fzf brew zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
+plugins=(git extract sudo systemadmin tmux npm yarn brew zsh-autosuggestions zsh-syntax-highlighting colored-man-pages)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -107,12 +107,6 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 alias mySession='tmux new-session -d -s "My"'
 alias workSession='tmux new-session -d -s "Work"'
 
-# Exports
-export PATH="/opt/homebrew/opt/icu4c/bin:$PATH"
-export PATH="/opt/homebrew/opt/icu4c/sbin:$PATH"
-export PATH="/opt/homebrew/opt/curl/bin:$PATH"
-export LDFLAGS="-L/opt/homebrew/opt/curl/lib"
-export CPPFLAGS="-I/opt/homebrew/opt/curl/include"
 alias config='/usr/bin/git --git-dir=/Users/jasyuiop/.cfg/ --work-tree=/Users/jasyuiop'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
