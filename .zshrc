@@ -106,6 +106,7 @@ eval "$(/opt/homebrew/bin/brew shellenv)"
 # Tmux Sessions
 alias mySession='tmux new-session -d -s "My"'
 alias workSession='tmux new-session -d -s "Work"'
+alias vim='nvim'
 
 alias config='/usr/bin/git --git-dir=/Users/jasyuiop/.cfg/ --work-tree=/Users/jasyuiop'
 
