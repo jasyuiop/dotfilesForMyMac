@@ -20,7 +20,7 @@ source $ZSH/oh-my-zsh.sh
 # User configuration
 eval "$(/opt/homebrew/bin/brew shellenv)"
 export EDITOR='nvim'
-alias vim='nvim'
+#alias vim='nvim'
 
 # Tmux Sessions
 alias mySession='tmux new-session -d -s "My Session"'
